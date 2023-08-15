@@ -14,7 +14,31 @@ module.exports = {
       extends: ['plugin:cypress/recommended']
     }
   ],
+  rules: {
+    'vue/attributes-order': [
+      'error',
+      {
+        order: [
+          'DEFINITION',
+          'LIST_RENDERING',
+          'CONDITIONALS',
+          'RENDER_MODIFIERS',
+          'GLOBAL',
+          ['UNIQUE', 'SLOT'],
+          'TWO_WAY_BINDING',
+          'OTHER_DIRECTIVES',
+          'OTHER_ATTR',
+          'EVENTS',
+          'CONTENT'
+        ],
+        alphabetical: false
+      }
+    ]
+  },
   parserOptions: {
     ecmaVersion: 'latest'
+  },
+  env: {
+    node: true
   }
 }
