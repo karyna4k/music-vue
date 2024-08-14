@@ -1,5 +1,10 @@
+<script setup lang="ts">
+import AppHeader from '@/components/AppHeader.vue'
+import AppAuth from '@/components/AppAuth.vue'
+</script>
+
 <template>
-  <app-header></app-header>
+  <AppHeader />
   <!-- Introduction -->
   <section class="mb-8 py-20 text-white text-center relative">
     <div
@@ -263,18 +268,6 @@
       <div class="player-duration">03:06</div>
     </div>
   </div>
-  <app-auth />
+
+  <AppAuth />
 </template>
-
-<script>
-import AppHeader from '@/components/AppHeader.vue'
-import AppAuth from '@/components/AppAuth.vue'
-
-export default {
-  name: 'App',
-  components: {
-    AppHeader,
-    AppAuth
-  }
-}
-</script>
