@@ -1,3 +1,14 @@
+<script setup lang="ts">
+import { storeToRefs } from 'pinia'
+import { useModalStore } from '@/stores/modal'
+
+const { isOpen } = storeToRefs(useModalStore())
+
+function toggleAuthModal() {
+  isOpen.value = !isOpen.value
+}
+</script>
+
 <template>
   <!-- Header -->
   <header id="header" class="bg-gray-700">
@@ -10,7 +21,9 @@
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
           <li>
-            <a class="px-2 text-white" href="#">Login / Register</a>
+            <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal"
+              >Login / Register</a
+            >
           </li>
           <li>
             <a class="px-2 text-white" href="#">Manage</a>
