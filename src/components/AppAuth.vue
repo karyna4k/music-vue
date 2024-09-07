@@ -3,7 +3,7 @@ import { storeToRefs } from 'pinia'
 import { useModalStore } from '@/stores/modal'
 import { ref } from 'vue'
 import Login from '@/components/LoginForm.vue'
-import Register from '@/components/RegistrationForm.vue'
+import Register from '@/components/RegisterForm.vue'
 
 const { isOpen: modalVisibility, hiddenClass } = storeToRefs(useModalStore())
 
